@@ -5,8 +5,8 @@ std::string classify_tshirt(int size) {
     if (size <= 38) {
         sizeName = "Small";
     } else if (size < 42) {
-        sizeName = "Medium"; }
-    else {
+        sizeName = "Medium"; 
+    } else {
         sizeName = "Large"; }
     return sizeName;
 }
