@@ -9,3 +9,8 @@ TEST(TShirtTest, ClassifyTShirt) {
     // Test case for the missing input value
     EXPECT_EQ(classify_tshirt(42), "Large");
 }
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
