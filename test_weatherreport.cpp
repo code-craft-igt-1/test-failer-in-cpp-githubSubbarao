@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include "weatherreport.cpp"
 
-using namespace WeatherSpace;
+using WeatherSpace::Report;
+using WeatherSpace::SensorStub;
 
 TEST(WeatherReportTest, ReportWeather) {
     SensorStub sensor;
