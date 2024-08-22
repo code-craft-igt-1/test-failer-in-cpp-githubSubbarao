@@ -5,7 +5,7 @@ TEST(TShirtTest, ClassifyTShirt) {
     EXPECT_EQ(classify_tshirt(37), "Small");
     EXPECT_EQ(classify_tshirt(39), "Medium");
     EXPECT_EQ(classify_tshirt(43), "Large");
-    //EXPECT_EQ(classify_tshirt(47), "Extra Large");
+    // EXPECT_EQ(classify_tshirt(47), "Extra Large");
     // Test case for the missing input value
-    EXPECT_EQ(classify_tshirt(42), "Large"); 
+    EXPECT_EQ(classify_tshirt(42), "Large");
 }

@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
 #include "misaligned.cpp"  // Include the implementation file
 
-// Function to capture the output of print_color_map
-std::vector<std::string> capture_print_color_map_output() {
+// Function to capture the output of printColorMap
+std::vector<std::string> capture_printColorMap_output() {
     std::vector<std::string> output;
     std::stringstream buffer;
     std::streambuf* old = std::cout.rdbuf(buffer.rdbuf());
 
-    print_color_map();
+    printColorMap();
 
     std::cout.rdbuf(old);
     std::string line;
@@ -26,10 +26,11 @@ TEST(ColorMapTest, PrintColorMap) {
         "3 | Yellow",
         "4 | Violet"
     };
-    EXPECT_EQ(capture_print_color_map_output(), expected_output);  // This should fail
+    EXPECT_EQ(capture_printColorMap_output(), expected_output);  // This should fail
 }
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+
