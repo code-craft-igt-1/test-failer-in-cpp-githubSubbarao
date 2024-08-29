@@ -72,7 +72,8 @@ void TestHighPrecipitationAndLowWindspeed() {
     // strengthen the assert to expose the bug
     // (function returns Sunny day, it should predict rain)
     string report = Report(sensor);
-    assert(report.length() > 0);
+    cout << report << endl;
+    assert(report == "Rainy day");
 }
 }  // namespace WeatherSpace
 
