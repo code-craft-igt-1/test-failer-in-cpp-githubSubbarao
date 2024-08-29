@@ -1,12 +1,24 @@
-#include <string>
+#include <assert.h>
+#include <iostream>
 
-std::string classify_tshirt(int size) {
-    std::string sizeName;
-    if (size <= 38) {
-        sizeName = "Small";
-    } else if (size < 42) {
-        sizeName = "Medium";
-    } else {
-        sizeName = "Large"; }
+char size(int cms) {
+    char sizeName = '\0';
+    if (cms < 38) {
+        sizeName = 'S';
+    } else if (cms >= 38 && cms < 42) {
+        sizeName = 'M';
+    } else if (cms >= 42) {
+        sizeName = 'L';
+    }
     return sizeName;
+}
+
+int main() {
+    assert(size(37) == 'S');
+    assert(size(40) == 'M');
+    assert(size(43) == 'L');
+    assert(size(38) == 'M');
+    assert(size(42) == 'L');
+    std::cout << "All is well (maybe!)\n";
+    return 0;
 }
